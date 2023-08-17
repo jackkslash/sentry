@@ -1,10 +1,16 @@
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import ChatRoom from './pages/ChatRoom';
+
+
 function App() {
 
   return (
     <>
-      <div className="text-black underline">
-        Test
-      </div>
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path='/chatroom' element={<ChatRoom />} />
+      </Routes>
     </>
   )
 }
